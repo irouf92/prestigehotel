@@ -1,0 +1,33 @@
+<footer class="mt-4 pt-4 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md text-center ">
+                <h5 class="my-3">Prestige-Hotel
+                <small class=" text-muted">&copy; {{ 'now' | date('Y') }}</small>
+                </h5>
+
+            </div>
+            <hr>
+            <div class="col-6 col-md ">
+                <h5>Contact</h5>
+                
+                        {# {{ render(url('render_categories_in_footer')) }} #}
+                
+            </div>
+            <div class="col-6 col-md">
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-muted">Mentions légales</a></li>
+                    <li><a href="#" class="text-muted">Politique de confidentialité</a></li>
+                    <li><a href="#" class="text-muted">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark">
+        <div class="row">
+            <div class="col">
+                <p class="text-center text-white">&copy; Prestige-Hotel {{ 'now' | date('Y') }}</p>
+            </div>
+        </div>
+    </div>
+</footer>
