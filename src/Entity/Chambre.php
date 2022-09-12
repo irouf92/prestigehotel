@@ -2,13 +2,20 @@
 
 namespace App\Entity;
 
-use App\Repository\ChambreRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ChambreRepository;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
+use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 
 #[ORM\Entity(repositoryClass: ChambreRepository::class)]
 class Chambre
 {
+
+    use TimestampableEntity;
+    use SoftDeleteableEntity;
+
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -28,6 +35,9 @@ class Chambre
 
     #[ORM\Column(length: 5)]
     private ?string $prixJournalier = null;
+
+    #[ORM\OneToOne(mappedBy: 'chambre', cascade: ['persist', 'remove'])]
+    private ?Commande $commande = null;
 
     public function getId(): ?int
     {
@@ -90,6 +100,23 @@ class Chambre
     public function setPrixJournalier(string $prixJournalier): self
     {
         $this->prixJournalier = $prixJournalier;
+
+        return $this;
+    }
+
+    public function getCommande(): ?Commande
+    {
+        return $this->commande;
+    }
+
+    public function setCommande(Commande $commande): self
+    {
+        // set the owning side of the relation if necessary
+        if ($commande->getChambre() !== $this) {
+            $commande->setChambre($this);
+        }
+
+        $this->commande = $commande;
 
         return $this;
     }

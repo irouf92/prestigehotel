@@ -2,12 +2,19 @@
 
 namespace App\Entity;
 
-use App\Repository\SliderRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\SliderRepository;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
+use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 
 #[ORM\Entity(repositoryClass: SliderRepository::class)]
 class Slider
 {
+
+    use TimestampableEntity;
+    use SoftDeleteableEntity;
+
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]

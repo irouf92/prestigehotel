@@ -2,13 +2,20 @@
 
 namespace App\Entity;
 
-use App\Repository\CommandeRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\CommandeRepository;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
+use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 
 #[ORM\Entity(repositoryClass: CommandeRepository::class)]
 class Commande
 {
+
+    use TimestampableEntity;
+    use SoftDeleteableEntity;
+
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -34,6 +41,10 @@ class Commande
 
     #[ORM\Column(length: 255)]
     private ?string $email = null;
+
+    #[ORM\OneToOne(inversedBy: 'commande', cascade: ['persist', 'remove'])]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?chambre $chambre = null;
 
     public function getId(): ?int
     {
@@ -120,6 +131,18 @@ class Commande
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getChambre(): ?chambre
+    {
+        return $this->chambre;
+    }
+
+    public function setChambre(chambre $chambre): self
+    {
+        $this->chambre = $chambre;
 
         return $this;
     }
