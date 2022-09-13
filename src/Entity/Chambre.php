@@ -40,6 +40,10 @@ class Chambre
     #[ORM\OneToOne(mappedBy: 'chambre', cascade: ['persist', 'remove'])]
     private ?Commande $commande = null;
 
+    #[ORM\Column(length: 100)]
+    private ?string $alias = null;
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,7 +90,7 @@ class Chambre
         return $this->photo;
     }
 
-    public function setPhoto(string $photo): self
+    public function setPhoto(?string $photo): self
     {
         $this->photo = $photo;
 
@@ -118,6 +122,18 @@ class Chambre
         }
 
         $this->commande = $commande;
+
+        return $this;
+    }
+
+    public function getAlias(): ?string
+    {
+        return $this->alias;
+    }
+
+    public function setAlias(string $alias): self
+    {
+        $this->alias = $alias;
 
         return $this;
     }

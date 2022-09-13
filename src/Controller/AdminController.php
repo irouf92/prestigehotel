@@ -46,6 +46,8 @@ class AdminController extends AbstractController
             $chambre->setCreatedAt(new DateTime());
             $chambre->setUpdatedAt(new DateTime());
 
+            $chambre->setAlias($slugger->slug($chambre->getTitre()) );
+
             /** @var UploadedFile $photo */
             $photo = $form->get('photo')->getData();
 
@@ -84,14 +86,30 @@ class AdminController extends AbstractController
     }// end function handleFile()
 
     #[Route('/modifier-une-chambre/{id}', name: 'update_chambre', methods: ['GET', 'POST'])]
-    public function updateChambre(Chambre $chambre, Request $request, ChambreRepository $repository): Response
+    public function updateChambre(Chambre $chambre, Request $request, ChambreRepository $repository, SluggerInterface $slugger): Response
     {
+        $originalPhoto = $chambre->getPhoto();
 
-        $form = $this->createForm(ChambreFormType::class, $chambre, [])->handleRequest($request);
+        $form = $this->createForm(ChambreFormType::class, $chambre, [
+            'photo' => $originalPhoto
+        ])->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid())
         {
                 $chambre->setUpdatedAt(new DateTime());
+                $chambre->setAlias($slugger->slug($chambre->getTitre()) );
+
+                    /** @var UploadedFile $photo */
+                $photo = $form->get('photo')->getData();
+
+                if($photo){
+                    $this->handleFile($photo, $slugger, $chambre);
+                }
+                else {
+                    $chambre->setPhoto($originalPhoto);
+                }// end if $photo
+
+                $repository->add($chambre, true);
 
                 $this->addFlash('success', "La chambre a bien été Modifier, en ligne !");
                 return $this->redirectToRoute('show_dashboard');
