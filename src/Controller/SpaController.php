@@ -6,12 +6,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ThemeController extends AbstractController
+class SpaController extends AbstractController
 {
-    #[Route('/theme', name: 'show_restaurant')]
-    public function restaurant(): Response
+    #[Route('/spa', name: 'show_spa')]
+    public function spa(): Response
     {
-        return $this->render('thematique/show_restaurant.html.twig', [
+        return $this->render('thematique/show_spa.html.twig', [
            
         ]);
     }

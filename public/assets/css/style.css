@@ -120,3 +120,7 @@
     transition: .2s;
     border-radius: 20px;
 }
+
+section{
+    margin: 20px;
+}

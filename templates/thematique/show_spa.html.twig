@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Spa
+{% endblock %}
+
+{% block body %}
+
+
+	<h1 class="text-center my-3">Spa</h1>
+
+	<section class="row my-3">
+		<div class="col-10 mx-auto" style="width: 18rem;">
+			<img src="{{ asset('uploads/spa.jpg') }}" class="card-img-top" alt="...">
+			<p class="text-center">
+				<strong>Spa avec soin Détente</strong>
+			</p>
+			<div class="card-body">
+				<ul>
+					<li>
+						Détendez-vous 2h au Spaquana avec une formule all inclusive.</li>
+
+					<li>Piscine, hammam et espace détente agrémentés d’un soin d’1h, d’un repas gourmand composé d'un menu en 3 plats au choix sur la carte du bistrot, le 20 du Domaine -  125 €/personne</li>
+
+					<li>Offre valable du lundi au vendredi en journée (hors jours fériés et ponts)
+						EN SEPTEMBRE, 1h d'accès au spa supplémentaire est offerte en réservant avec le code promo septembre 2022.</li>
+
+
+				</ul>
+			</div>
+		</div>
+
+		<div class="col-10 mx-auto" style="width: 18rem;">
+			<img src="{{ asset('uploads/wellness-spa.jpg') }}" class="card-img-top" alt="...">
+			<p class="text-center">
+				<strong>Spa avec soin Relaxant</strong>
+			</p>
+			<div class="card-body">
+
+				<li>Un moment de relaxation et de détente à partager avec votre enfant au spa.</li>
+
+				<li>3 formules incluant l'accès au spa, et/ou le soin de 30 minutes par personne</li>
+
+				<li>Accès au spa 2h & déjeuner au 20 du Domaine (menu du jour + menu enfant) - 85 €</li>
+				<li>Accès au spa 2h & soin de 30 minutes par personne - 119 €</li>
+				<li>Accès au spa 2h & soin de 30 minutes par personne & déjeuner au 20 du Domaine</li>
+			</(menudujour+menuenfant)-155€</li>
+
+			<li>Valable le matin en semaine, avec votre enfant de moins de 12 ans (sur réservation)</li>
+
+
+		</div>
+	</div>
+
+	<div class="col-10 mx-auto" style="width: 18rem;">
+		<img src="{{ asset('uploads/detente.jpg') }}" class="card-img-top" alt="...">
+		<p class="text-center">
+			<strong>Spa avec soin Plaisir</strong>
+		</p>
+		<div class="card-body">
+			<li>Partagez une soirée de bien-être vous. Le mardi, le Spa vous est réservé de 20h à 23h.</li>
+			<li>Cocktail dînatoire avec softs et une coupe de champagne, accès à la piscine intérieure, au sauna et au hammam.</li>
+			<li>55 € par personne - 65 € avec un soin de 15 minutes</li>
+
+
+		</div>
+	</div>
+</section>{% endblock %}
