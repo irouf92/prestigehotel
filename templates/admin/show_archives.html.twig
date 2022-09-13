@@ -69,7 +69,7 @@
                         <!--====ACTIONS====-->
 							<td class="text-justify">
                                 <a href="{{ path('restore_article', {'id': chambre.id} )}}" class="text-info" title="restaurer"><i class="fa-solid fa-trash-arrow-up"></a>
-                                <a href="" class="text-danger" title="Archiver la chambre" onclick="return confirm('Voulez-vous archiver cette chambre ?')"><i class="fa fa-trash"></i></a>
+                                <a href="{{ path('hard_delete_chambre', {'id': chambre.id}) }}" class="text-danger" title="Suprimer la chambre" onclick="return confirm('Voulez-vous archiver cette chambre ?')"><i class="fa fa-trash"></i></a>
                             </td>
                         <!--====ACTIONS====-->
 

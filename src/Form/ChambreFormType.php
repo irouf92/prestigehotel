@@ -6,6 +6,7 @@ use App\Entity\Chambre;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -24,7 +25,10 @@ class ChambreFormType extends AbstractType
             ->add('descriptionLong',  TextareaType::class, [
                 'label' => 'Description'
             ])
-            ->add('photo')
+            ->add('photo', FileType::class, [
+                'label' => 'Image',
+                'data_class' => null,
+            ])
             ->add('prixJournalier')
             ->add('submit', SubmitType::class, [
                 'label' => 'Valider',
@@ -41,6 +45,8 @@ class ChambreFormType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Chambre::class,
+            'allow_file_upload' => true,
+            'photo' => null
         ]);
     }
 }
