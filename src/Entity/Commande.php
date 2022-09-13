@@ -44,7 +44,8 @@ class Commande
 
     #[ORM\OneToOne(inversedBy: 'commande', cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
-    private ?chambre $chambre = null;
+    private ?Chambre $chambre = null;
+
 
     public function getId(): ?int
     {
@@ -135,15 +136,16 @@ class Commande
         return $this;
     }
 
-    public function getChambre(): ?chambre
+    public function getChambre(): ?Chambre
     {
         return $this->chambre;
     }
 
-    public function setChambre(chambre $chambre): self
+    public function setChambre(Chambre $chambre): self
     {
         $this->chambre = $chambre;
 
         return $this;
     }
+
 }
