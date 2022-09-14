@@ -116,35 +116,17 @@ top: 0;
     padding: 20px;
 }
 
-.card{
-    width: 250px;
-    padding: 10px;
-    /* border: 1px solid #000; */
-   
+.bg-card {
+    background: rgb(193,154,85);
+    background: linear-gradient(150deg, rgba(193,154,85,1) 0%, rgba(247,230,150,1) 100%);
+    border-radius: 10px;
 }
 
-.card img{
-    border-radius: 50%;
-    margin: 0 auto;
-}
-
-.card h2{
-    text-align: center;
-}
-
-.card p{
-    width: 100%;
-    text-align: justify;
-}
-
-.card button{
-    background: rgb(27, 118, 255);
-    border: none;
-}
-.card button{
-    background: rgb(27, 118, 255);
-    border: none;
+.bg-author {
+    background-color: #212529;
+    border-radius: 5px 5px 0 0;
     padding: 5px;
+    color: #c19a55;
 }
 
 .card button:hover{
@@ -186,4 +168,15 @@ top: 0;
     color: white !important;
     text-decoration: none !important;
     font-weight: bold !important;
+}
+.list-custom {
+    list-style: none;
+}
+
+.img-custom {
+    width: 100%;
+}
+
+.text-justify {
+    text-align: justify;
 }
