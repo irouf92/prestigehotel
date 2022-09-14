@@ -3,13 +3,17 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    <div class="head__container">
+ 
+ {{render(url('carousel_in_nav'))}}
+
 
         <div class="intro-button">
-            <input type="submit" value="HouseHotel">
+            <input type="submit" value="HotelPrestige">
             <input type="submit" value="Découvrez Nos chambre">
         </div>
 </div>
+
+    
 
 <section class="discovery">
 
