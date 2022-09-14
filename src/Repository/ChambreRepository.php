@@ -39,6 +39,16 @@ class ChambreRepository extends ServiceEntityRepository
         }
     }
 
+    public function findAllArchived(string $order = 'ASC')
+    {
+        return $this->createQueryBuilder('a')
+            ->where('a.deletedAt IS NOT NULL')
+            ->orderBy('a.deletedAt', $order)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
 //    /**
 //     * @return Chambre[] Returns an array of Chambre objects
 //     */

@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\Commande;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ChambreRepository;
@@ -38,6 +39,13 @@ class Chambre
 
     #[ORM\OneToOne(mappedBy: 'chambre', cascade: ['persist', 'remove'])]
     private ?Commande $commande = null;
+
+    #[ORM\Column(length: 100)]
+    private ?string $alias = null;
+
+    #[ORM\Column(length: 100)]
+    private ?string $categorie = null;
+
 
     public function getId(): ?int
     {
@@ -85,7 +93,7 @@ class Chambre
         return $this->photo;
     }
 
-    public function setPhoto(string $photo): self
+    public function setPhoto(?string $photo): self
     {
         $this->photo = $photo;
 
@@ -117,6 +125,30 @@ class Chambre
         }
 
         $this->commande = $commande;
+
+        return $this;
+    }
+
+    public function getAlias(): ?string
+    {
+        return $this->alias;
+    }
+
+    public function setAlias(string $alias): self
+    {
+        $this->alias = $alias;
+
+        return $this;
+    }
+
+    public function getCategorie(): ?string
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(string $categorie): self
+    {
+        $this->categorie = $categorie;
 
         return $this;
     }

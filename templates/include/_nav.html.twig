@@ -10,7 +10,7 @@
           <a class="nav-link active" aria-current="page" href="{{ path("home") }}">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Chambre</a>
+          <a class="nav-link" href="{{ path("app_chambre") }}" aria-current>Chambre</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ path("show_restaurant") }}">Restaurant</a>
@@ -36,6 +36,8 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
       
             <li><a class="dropdown-item" href="{{ path('show_membres') }}"> Gestion des membres</a></li>
+            <li><a class="dropdown-item" href="{{ path('show_dashboard') }}">Administration</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="{{ path('show_slider') }}">Gestion des Slider</a></li>
           </ul>
