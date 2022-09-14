@@ -14,4 +14,20 @@ class DefaultController extends AbstractController
     {
         return $this->render('default/home.html.twig');
     }
+
+    #[Route('/mentions-légales', name: 'mentionslegales')]
+    public function mentions(): Response
+    {
+        return $this->render('otherlinks/mentionslegales.html.twig', [
+           
+        ]);
+    }
+
+    #[Route('/conditions-général-de-vente', name: 'cgv')]
+    public function cgv(): Response
+    {
+        return $this->render('otherlinks/cgv.html.twig', [
+           
+        ]);
+    }
 }
