@@ -1,5 +1,3 @@
-
-
 *{
     margin: 0;
     padding: 0;
@@ -7,17 +5,53 @@
 }
 
 
+/*********************NAVBAR*************************/
+.my-nav{
+    z-index: 999 !important;
+    border: 0 !important;
+    position: absolute;
+
+
+}
+.my-nav a{
+ color: #000 !important;
+
+
+}
+
+.my-nav a:hover{
+    color: rgb(117, 103, 56) !important;
+   transform: scale(1.2) !important;
+    border-bottom: 1px solid rgb(117, 103, 56) !important;
+   
+}
+
+/************************ FIN NAVBAR ***************************/
+/************************* CAROUSEL ****************************/
+
+.carousel-img {
+width: 100%;
+top: 0;
+}
+
+
+ #HeaderCarousel {
+   top: 0;
+   position: absolute;
+
+    
+}
+/************************ FIN CAROUSEL **************************/
 .head__container{
     width: 100%;
     height: 90vh;
-    background-image: url("../images/front-pic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+ 
 }
 
 
@@ -34,16 +68,18 @@
     padding: 5px !important;
     width: 45% !important;
     height: 35px !important;
-    background: rgb(27, 118, 255);
+    background: rgb(0, 0, 0);
     border: none !important;
+    color: wheat;
 }
 
 .btn-blue {
     padding: 5px !important;
     width: 100% !important;
     height: 35px !important;
-    background: rgb(27, 118, 255) !important;
+    background: rgb(0, 0, 0) !important;
     border: none !important;
+     color: wheat;
 }
 
 
@@ -51,7 +87,7 @@
     padding: 7px;
     width: 45%;
     height: 45px;
-    background: #ff961b !important;
+    background: rgb(103, 82, 39) !important;
     color: white;
     border: none;
     font-weight: bold;
@@ -60,7 +96,7 @@
 }
 .btn-blue:hover {
 
-    background: #ff961b !important;
+    background: rgb(103, 82, 39) !important;
     color: white;
     border: none;
     font-weight: bold;
@@ -118,3 +154,26 @@
     transition: .2s;
     border-radius: 20px;
 }
+
+.vertical-line{
+        border-left: 2px solid #000;
+        display: inline-block;
+        height: 130px;
+        margin: 0 20px;
+      }
+
+
+
+.img-custom {
+    object-fit: contain;
+
+}
+
+
+/* FORMULAIRE CONTACT */
+ .wrapper{
+    background-color: #5f5d5b28;
+    border-radius: 5px;
+ }
+/*FIN FORMULAIRE CONTACT */
+
