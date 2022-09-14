@@ -6,7 +6,7 @@
 {% block body %}
 
 
-	<h1 class="text-center my-3">Restaurant</h1>
+	<h1 class="text-center my-3 card-title mb-5">Restaurant</h1>
 
 	<section class="row my-3">
 		<div class="col-10 mx-auto" style="width: 18rem;">
@@ -14,61 +14,38 @@
 			<p class="text-center">
 				<strong>Carte Brasserie</strong>
 			</p>
-			<div class="card-body">
-				<ul>
-					<li>Pièce du boucher, pommes grenailles rôties, sauce aux cèpes & mesclun.</li>
-					<li>Filet de Daurade rôti, mousseline de pommes terre, spaghettis de légumes
-												Tartare de bœuf au couteau préparé, pommes frites artisanales & mesclun
-												Pièce du boucher, pommes grenailles rôties, sauce aux cèpes, mesclun</li>
-					<li>Salade Chicken Caesar</li>
-					<li>Mozzarella di Buffala & Tomates de Provence, mesclun maraîcher versions plat</li>
-					<li>Le retour de la marée (demander au serveur)</li>
-					<li>Assiette Végétarienne (assortiment de légumes & féculents)</li>
+			<div class="text-center">
 
-					<a href="" class="btn btn-dark col-10 text-center">
-						Voir carte en pdf</a>
+				<a href="{{ asset('uploads/Carte.pdf') }}" class="btn btn-dark col-10 text-center ">
+					Télécharger la carte</a>
 
-				</ul>
+
 			</div>
 		</div>
+
 
 		<div class="col-10 mx-auto" style="width: 18rem;">
 			<img src="{{ asset('uploads/indoors.jpg') }}" class="card-img-top" alt="...">
 			<p class="text-center">
 				<strong>Carte Dégustation</strong>
 			</p>
-			<div class="card-body">
-				<li>Gamberoni du golfe de Gênes marinées au yuzu /
-										Eau de tomate / sorbet céleri</li>
-				<li>Homard bleu juste tiedi dans son beurre / pulpe d’avocat relevée / jus d’agrumes à l’orange / copeaux de jambon ibérique</li>
-				<li>Risotto «Carnaroli» cuisiné à l’eau de cèpes/ cèpes rôtis ramassés en Montagne / jus de veau</li>
-				<li>Haddock épais cuisiné dans un lait à l’anis/mousseline de brocolis liée à l’huile d’olive extra vierge/jus à l’orange</li>
-				<li>Saint Pierre cuisiné aux figues et cêpes rôtis / jus de figue à la tomate mûre
-										Bonbons de foie gras en sucre cristallisé</li>
-				<li>Selle d’Agneau juste rôtie / socca minute / couteaux de plongée / jus au colombo</li>
+			<div class="text-center">
 
-				<a href="" class="btn btn-dark col-10 text-center">
-					Voir carte en pdf</a>
+				<a href="{{ asset('uploads/Restaurant Carte.pdf') }}" class="btn btn-dark col-10 text-center">
+					Télécharger la carte</a>
 			</div>
 		</div>
+
 
 		<div class="col-10 mx-auto" style="width: 18rem;">
 			<img src="{{ asset('uploads/dining-room.jpg') }}" class="card-img-top" alt="...">
 			<p class="text-center">
 				<strong>Carte Restaurant</strong>
 			</p>
-			<div class="card-body">
-				<li>Pavé de Filet de Bœuf, sauce au poivre, pommes grenailles & légumes du jour (supplément 3€)</li>
-				<li>Le retour de la marée (demander au serveur)</li>
-				<li>Filet de Daurade rôtie, mousseline de pommes de terre & spaghettis de légumes
-										Ribs de Cochon confit, Palet de Polenta & légumes confits, Sauce Barbecue</li>
-				<li>Assiette Végétarienne (Assortiment de légumes crus, cuits & féculents)</li>
-				<li>Tartare de bœuf préparé, pommes frites, mesclun maraîcher</li>
-				<li>Saint-Jacques poêlées, tombée de Poireaux, Risotto d’Epeautre & Beurre Blanc</li>
+			<div class="text-center">
 
-
-				<a href="" class="btn btn-dark col-10 text-center">
-					Voir carte en pdf</a>
+				<a href="{{ asset('uploads/diner.pdf') }}" class="btn btn-dark col-10 text-center">
+					Télécharger la carte</a>
 			</div>
 		</div>
 	</section>
