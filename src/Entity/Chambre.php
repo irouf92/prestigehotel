@@ -43,6 +43,9 @@ class Chambre
     #[ORM\Column(length: 100)]
     private ?string $alias = null;
 
+    #[ORM\Column(length: 100)]
+    private ?string $categorie = null;
+
 
     public function getId(): ?int
     {
@@ -134,6 +137,18 @@ class Chambre
     public function setAlias(string $alias): self
     {
         $this->alias = $alias;
+
+        return $this;
+    }
+
+    public function getCategorie(): ?string
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(string $categorie): self
+    {
+        $this->categorie = $categorie;
 
         return $this;
     }
