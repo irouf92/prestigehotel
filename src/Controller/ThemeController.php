@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ThemeController extends AbstractController
 {
-    #[Route('/theme', name: 'show_restaurant')]
+    #[Route('/theme', name: 'show_restaurant', methods: ['GET'])]
     public function restaurant(): Response
     {
         return $this->render('thematique/show_restaurant.html.twig', [
