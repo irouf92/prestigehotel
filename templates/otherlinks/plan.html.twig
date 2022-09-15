@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mentions légales{% endblock %}
+
+{% block body %}
+
+   
+    <div class="col-8 mx-auto center">
+
+    <h1>Plan du site</h1>
+    <ul>
+        <li><a href="{{ path("home") }}">Acceuil</a></li>
+        <li><a href="{{ path("app_chambre") }}">Chambre</a></li>
+        <ul>
+            <li><a href="{{ path('app_chambre_classique') }}">Classique</a></li>
+            <li><a href="{{ path('app_chambre_confort') }}">Confort</a></li>
+            <li><a href="{{ path('app_chambre_suite') }}">Suite</a></li>
+        </ul>
+        <li><a href="{{ path("show_restaurant") }}">Restaurant</a></li>
+        <li><a href="{{ path("show_spa") }}">Le Spa</a></li>
+        <li><a href="{{ path('show_commentaire') }}"></a>Avis</li>
+        <li><a href="{{ path('presentation') }}">L’hôtel</a></li>
+        <ul>
+            <li><a href="{{ path('contact') }}">Contact et Accès</a></li>
+        </ul>
+        <li><a href="{{ path('show_articles') }}">Actualités</a></li>
+        <li><a href="{{ path('mentionslegales') }}">Mentions Légales</a></li>
+        <li><a href="{{ path('cgv') }}">CGV</a></li>
+        <li><a href="{{ path('newsletter') }}">S’inscrire à la newsletter</a></li>
+        <li><a href="">Voir son panier</a></li>
+        <li><a href="{{ path('plan') }}">Plan du site</a></li>
+        
+    </ul>
+
+
+    
+    </div>
+    
+
+
+{% endblock %}

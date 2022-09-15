@@ -30,4 +30,12 @@ class DefaultController extends AbstractController
            
         ]);
     }
+
+    #[Route('/plan-du-site', name: 'plan')]
+    public function plan(): Response
+    {
+        return $this->render('otherlinks/plan.html.twig', [
+           
+        ]);
+    }
 }
