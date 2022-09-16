@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class NewsletterController extends AbstractController
 {
-    #[Route('/newsletter', name: 'newsletter')]
+    #[Route('/newsletter', name: 'newsletter', methods: ['GET'])]
     public function newsletter(Request $request): Response
     {
 
