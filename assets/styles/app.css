@@ -148,10 +148,21 @@ p{
 
 /* FORMULAIRE CONTACT */
 .wrapper{
-    background-color: #5f5d5b28;
+    background-color: #795e4328;
     border-radius: 5px;
 }
 /*FIN FORMULAIRE CONTACT */
+
+
+/* FORMULAIRE COMMENTAIRE */
+.com{
+    background-color: #6e573fc9;
+    border-radius: 5px;
+}
+/*FIN FORMULAIRE CONTACT */
+
+
+
 
 /* ABOUT US */
 .about{
