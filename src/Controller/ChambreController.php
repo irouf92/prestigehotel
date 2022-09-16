@@ -25,7 +25,7 @@ class ChambreController extends AbstractController
     public function chambreclassique(EntityManagerInterface $entityManager): Response
     {
 
-        $chambres = $entityManager->getRepository(Chambre::class)->findBy(['categorie' => 'c']);
+        $chambres = $entityManager->getRepository(Chambre::class)->findBy(['categorie' => 'c', 'deletedAt' => null]);
 
         return $this->render('chambre/classique.html.twig', [
                     'chambres' => $chambres
@@ -36,7 +36,7 @@ class ChambreController extends AbstractController
     public function chambreconfort(EntityManagerInterface $entityManager): Response
     {
 
-        $chambres = $entityManager->getRepository(Chambre::class)->findBy(['categorie' => 'confort']);
+        $chambres = $entityManager->getRepository(Chambre::class)->findBy(['categorie' => 'confort', 'deletedAt' => null]);
 
         return $this->render('chambre/confort.html.twig', [
                     'chambres' => $chambres
@@ -47,7 +47,7 @@ class ChambreController extends AbstractController
     public function chambresuite(EntityManagerInterface $entityManager): Response
     {
 
-        $chambres = $entityManager->getRepository(Chambre::class)->findBy(['categorie' => 's']);
+        $chambres = $entityManager->getRepository(Chambre::class)->findBy(['categorie' => 's', 'deletedAt' => null]);
 
         return $this->render('chambre/suite.html.twig', [
                     'chambres' => $chambres
