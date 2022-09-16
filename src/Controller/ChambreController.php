@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ChambreController extends AbstractController
 {
-    #[Route('/chambre', name: 'app_chambre')]
+    #[Route('/chambre', name: 'app_chambre', methods: ['GET'])]
     public function chambre(EntityManagerInterface $entityManager): Response
     {
 
@@ -21,7 +21,7 @@ class ChambreController extends AbstractController
         ]);
     } // chambre()
 
-    #[Route('/chambre-classique', name: 'app_chambre_classique')]
+    #[Route('/chambre-classique', name: 'app_chambre_classique', methods: ['GET'])]
     public function chambreclassique(EntityManagerInterface $entityManager): Response
     {
 
@@ -32,7 +32,7 @@ class ChambreController extends AbstractController
         ]);
     } // chambreclassique()
 
-    #[Route('/chambre-confort', name: 'app_chambre_confort')]
+    #[Route('/chambre-confort', name: 'app_chambre_confort', methods: ['GET'])]
     public function chambreconfort(EntityManagerInterface $entityManager): Response
     {
 
@@ -43,7 +43,7 @@ class ChambreController extends AbstractController
         ]);
     } // chambreconfort()
 
-    #[Route('/chambre-suite', name: 'app_chambre_suite')]
+    #[Route('/chambre-suite', name: 'app_chambre_suite', methods: ['GET'])]
     public function chambresuite(EntityManagerInterface $entityManager): Response
     {
 
