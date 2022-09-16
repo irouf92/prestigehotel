@@ -6,42 +6,16 @@
 
 
 /*********************NAVBAR*************************/
-.my-nav{
-    z-index: 999 !important;
-    border: 0 !important;
-    position: absolute;
 
-
-}
-.my-nav a{
- color: #000 !important;
-
-
-}
-
-.my-nav a:hover{
-    color: rgb(117, 103, 56) !important;
-   transform: scale(1.2) !important;
-    border-bottom: 1px solid rgb(117, 103, 56) !important;
-   
-}
-
-/************************ FIN NAVBAR ***************************/
-/************************* CAROUSEL ****************************/
-
-.carousel-img {
-width: 100%;
-top: 0;
-}
-
-
- #HeaderCarousel {
-   top: 0;
-   position: absolute;
-
+.menu-head{
+    width: 100%;
     
 }
-/************************ FIN CAROUSEL **************************/
+.site-title{
+    width: 100%;
+    padding: 5px;
+}
+
 .head_container{
     width: 100%;
     height: 60vh;
@@ -115,17 +89,6 @@ top: 0;
 }
 
 
-.discovery{
-    width: 100%;
-    height: 70vh;
-    /* background: rgba(0, 0, 0, 0.088); */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-}
-
 .bg-card {
     background: rgb(193,154,85);
     background: linear-gradient(150deg, rgba(193,154,85,1) 0%, rgba(247,230,150,1) 100%);
@@ -158,9 +121,10 @@ top: 0;
 
 .img-custom {
     object-fit: contain;
-
 }
+/* ************************ */
 
+/* ************************ */
 
 /* FORMULAIRE CONTACT */
 .wrapper{
@@ -184,7 +148,7 @@ top: 0;
 .about h2 {
 	opacity: .8;
 }
-.about span {
+.about span{
 	display: block;
 	width: 100px;
 	height: 100px;
@@ -196,12 +160,10 @@ top: 0;
 	opacity: 0.7;
 	background-color: #b6b6b6;
 	border: 2px solid #9d773b;
-
 	webkit-transition:all .5s ease;
- 	moz-transition:all .5s ease;
- 	os-transition:all .5s ease;
- 	transition:all .5s ease;
-
+    moz-transition:all .5s ease;
+    moz-transition:all .5s ease;
+    transition:all .5s ease;
 }
 .about-item:hover span{
 	opacity: 1;	
