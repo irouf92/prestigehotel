@@ -28,14 +28,14 @@
 					<p>
 					<span>{{ chambre.prixJournalier }}</span> €
 					</p>
-					 <a classe="reservation" href="">Réserver</a>
+					 <a classe="reservation" href="{{ path('app_reservation', {'id':app.request.attributes.get('id')} ) }}">Réserver</a>
 				</div>
 			</div>
 			<br>
 		{# ------------------------ #}
 		{% endfor %}
 		{# ------------------------ #}
-		
+		       
 
 	</section>
 
