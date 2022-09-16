@@ -6,6 +6,7 @@ use App\Entity\Commande;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ChambreRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 
@@ -45,6 +46,11 @@ class Chambre
 
     #[ORM\Column(length: 100)]
     private ?string $categorie = null;
+
+    public function __construct()
+    {
+        $this->commentaries = new ArrayCollection();
+    }
 
 
     public function getId(): ?int

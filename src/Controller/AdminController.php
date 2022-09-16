@@ -9,6 +9,7 @@ use App\Form\EditMembreType;
 use App\Entity\Chambre;
 use App\Form\ChambreFormType;
 use App\Repository\ChambreRepository;
+use App\Repository\CommandeRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -206,4 +207,23 @@ class AdminController extends AbstractController
 
     } // end hardDeleteChambre()
 
+
+    #[Route('/voir-les-reservations', name: 'show_reservations', methods: ['GET'])]
+    public function showReservations(CommandeRepository $commandes): Response
+    {
+        $reservation = $commandes->findAll();
+        $total = 0;
+
+        foreach ($reservation as $item) {
+           
+            $total= $item['chambre']->getPrice();
+
+        }
+
+        return $this->render('admin/reservations/show_reservations.html.twig', [
+            'total' => $total,
+            'commandes'=>$commandes
+        ]);
+    }
+  
 }// end class Admin
